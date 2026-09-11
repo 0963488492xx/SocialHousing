@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+	
+		<!-- 資料庫基本設定  -->
+		<!-- 資料庫驅動程式的 Driver Class -->
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+       	<!-- 資料庫連線的 URL -->
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=SocialHousingDB;encrypt=false</property>
+       	<!-- 資料庫連線使用者帳號 -->
+        <property name="hibernate.connection.username">xiao</property>
+        <!-- 資料庫連線使用者密碼 -->
+        <property name="hibernate.connection.password">9088</property>
+		<!-- 設定Hibernate 產生 SQL 語法時，產生適合特定資料庫語法 -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<!-- 設定console 印出 Hibernate 所產生的語法 -->
+        <property name="hibernate.show_sql">true</property>
+        <!-- 設定SQL 語法進行排版 -->
+        <property name="hibernate.format_sql">true</property>
+		<!-- 指定自動生成資料表設定  -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <!-- 有此設定才可以使用getCurrentSession -->
+        <property name="hibernate.current_session_context_class">thread</property>
+ 
+        <!-- 指定對應的資料類別 -->
+		<!-- <mapping class = "lab03.Users"></mapping> -->        
+      <!-- <mapping class = "lab06.model.Users"></mapping> -->
+
+		
+		<mapping class="Entity.Housing"/>
+		
+		
+		
+    </session-factory>
+</hibernate-configuration>
