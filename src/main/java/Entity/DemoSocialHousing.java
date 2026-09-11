@@ -102,7 +102,8 @@ public class DemoSocialHousing {
 
 	@Override
 	public String toString() {
-		return "SocialUsers [id=" + id + ", csvSeq=" + csvSeq + ", housingName=" + housingName + ", householdCount="
+		return "DemoSocialHousing [id=" + id + ", csvSeq=" + csvSeq + ", housingName=" + housingName
+				+ ", householdCount="
 				+ householdCount + ", district=" + district + ", areaSize=" + areaSize + ", organizer=" + organizer
 				+ ", importTime=" + importTime + "]";
 	}
